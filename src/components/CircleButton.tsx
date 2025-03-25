@@ -1,7 +1,7 @@
 import { View, Text, StyleSheet, type ViewStyle } from "react-native"
 
 interface Props {
-  children: string
+  children: JSX.Element
   style?: ViewStyle
 }
 
@@ -35,7 +35,7 @@ const styles = StyleSheet.create({
   circleButtonLabel: {
     color: '#ffffff',
     fontSize: 40,
-    lineHeight: 48
+    lineHeight: 78
   }
 })
 
