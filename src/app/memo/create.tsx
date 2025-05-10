@@ -8,23 +8,24 @@ import CircleButton from '../../components/CircleButton'
 import Icon from '../../components/Icon'
 import { db } from '../../config'
 
-const handlePress = async (): void => {
-  // addDoc(collection(db, 'memos'), {
-  //   bodyText: 'test'
-  // })
-  //   .then((docRef) => {
-  //     console.log('success', docRef.id)
-  //     router.back()
-  //   })
-  //   .catch(() => {
-  //     console.log('error')
-  //   })
-  await addDoc(collection(db, 'memos'), {
-    bodyText: 'test 2'
-  }).catch((error) => {
-      console.log(error)
+const handlePress = (): void => {
+// const handlePress = async (): void => {
+  addDoc(collection(db, 'memos'), {
+    bodyText: 'test'
+  })
+    .then((docRef) => {
+      console.log('success', docRef.id)
+      router.back()
     })
-  router.back()
+    .catch(() => {
+      console.log('error')
+    })
+  // await addDoc(collection(db, 'memos'), {
+  //   bodyText: 'test 2'
+  // }).catch((error) => {
+  //     console.log(error)
+  //   })
+  // router.back()
 }
 
 const Create = (): JSX.Element => {
